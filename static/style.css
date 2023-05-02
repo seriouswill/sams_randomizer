@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    background-image: url(./images/eurovision-2023-hearts-1024x520.jpg);
+    background-size:contain;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+button {
+    background-color: cornsilk;
+}
+
+.textbox {
+    background-color: yellow;
+    margin: 15%;
+}

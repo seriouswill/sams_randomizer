@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam's Eurovision Randomizer!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="textbox">
+    <h1>Welcome</h1> 
+    <form action="/name" method="post">
+        <input type="text" name="name1" id="name1" placeholder="type name here">
+        <button type="submit">Add Name</button>
+    </form>
+    {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+    {% endfor %}
+    
+    <h2>Names</h2>
+    {% for x in names %}
+    <li>{{ x }}</li>
+    {% endfor %}
+    <h2>Results</h2>
+
+    <form action="/random" method="post">
+    <button type="submit">Click to Randomize!</button>
+    </form>
+    
+    {% for x in random %}
+    <li>{{ x }}</li>
+    {% endfor %}
+    <h2>Reset</h2>
+    <form action="/reset" method="post">
+        <button type="submit">Reset</button>
+    </form></div>
+</body>
+</html>
