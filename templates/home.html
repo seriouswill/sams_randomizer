@@ -20,7 +20,7 @@
     
     <h2>Names</h2>
     {% for x in names %}
-    <li>{{ x }}</li>
+    <h4>{{ x }}</h4>
     {% endfor %}
     <h2>Results</h2>
 
@@ -29,7 +29,7 @@
     </form>
     
     {% for x in random %}
-    <li>{{ x }}</li>
+    <h3>{{ x }}</h3>
     {% endfor %}
     <h2>Reset</h2>
     <form action="/reset" method="post">
